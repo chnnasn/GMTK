@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 633742461
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui
+      Dependencies:
+        Dependency_0: everything
+    Info_1:
+      Name: everything
+      Dependencies:
+        Dependency_0: ui
+    Info_2:
+      Name: scene
+      Dependencies:
+        Dependency_0: ui
+        Dependency_1: everything
