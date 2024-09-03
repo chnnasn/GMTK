@@ -44,5 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 863908f83e816534cae47762a62c0727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rate: []
   playerPosition: {x: 0, y: 0, z: 0}
+  playerState: 
   grid: {fileID: 0}
+  endPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  bannedPosition: {x: 0, y: 0, z: 0}
+  daSuan0: {fileID: 11400000, guid: 359e795e8d6df4e4ca6619a70eac2362, type: 2}
+  daSuan1: {fileID: 11400000, guid: f6435d0372e4256458ee71f956facea1, type: 2}
+  daSuan2: {fileID: 11400000, guid: f0321978c7adef64cb95d18c28d15bcc, type: 2}
+  daSuan3: {fileID: 11400000, guid: c4163bc0dfdbe984d9671f9f48ae55fb, type: 2}
+  jiuBei0: {fileID: 11400000, guid: b1a1c983f262b00428f597b5bdd3d511, type: 2}
+  jiuBei1: {fileID: 11400000, guid: 3d528a7b8b2c4a9449cb8969feda8f75, type: 2}
+  jiuBei2: {fileID: 11400000, guid: 4213e7345c922f74691208df15f47c8d, type: 2}
+  jiuBei3: {fileID: 11400000, guid: 87df203ad99b36e4b9ee0134f011798b, type: 2}
+  tileUp: {fileID: 11400000, guid: 6883ca26a2221d2498a8a7785b874c3f, type: 2}
+  tileDown: {fileID: 11400000, guid: b52a11eea870fc94ab2f7dd257de85a0, type: 2}
