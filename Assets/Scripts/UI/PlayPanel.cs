@@ -22,8 +22,8 @@ public class PlayPanel : BasePanel
 
         base.Awake();
     }
-    public GameObject imageImp;
-    public GameObject imageCha;
+    public GameObject imageImp; //门
+    public GameObject imageCha; //角色
     public List<float> rate = new List<float>() { 0.4f, 0.55f, 0.7f, 0.85f, 1f };
 
     public override void HideMe()
@@ -33,7 +33,9 @@ public class PlayPanel : BasePanel
 
     public override void ShowMe()
     {
-
+        //显示PlayPanel时直接设定门的尺寸
+        Vector3 end = new Vector3(rate[EventDeal.Instance.end.Item2 - 1], rate[EventDeal.Instance.end.Item1 - 1], 1.0f);
+        imageImp.transform.localScale = end;
     }
 
     // Start is called before the first frame update
@@ -92,6 +94,7 @@ public class PlayPanel : BasePanel
                 UIMgr.Instance.ShowPanel<ChoosePanel>();
                 UIMgr.Instance.HidePanel<LosePanel>();
                 UIMgr.Instance.HidePanel<PlayPanel>();
+
                 break;
             case "ButtonAgain":
                 //print("你点了BUttonAgain!");

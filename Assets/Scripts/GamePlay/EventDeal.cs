@@ -38,7 +38,18 @@ public class EventDeal : MonoBehaviour
     public Vector3Int startPosition;
     //由于刚走过所以被禁用的格子
     public Vector3Int bannedPosition;
-    
+    //依次是：大蒜的0到3，酒杯的0到3
+    public TileBase daSuan0;
+    public TileBase daSuan1;
+    public TileBase daSuan2;
+    public TileBase daSuan3;
+    public TileBase jiuBei0;
+    public TileBase jiuBei1;
+    public TileBase jiuBei2;
+    public TileBase jiuBei3;
+    public TileBase tileUp;
+    public TileBase tileDown;
+
 
 
     public (bool,int,Vector3) MoveDetermine(Vector3 worldPos)
@@ -69,41 +80,158 @@ public class EventDeal : MonoBehaviour
                 print("yes1");
                 //判断是否是起点
                 if (clickPosition != startPosition) {
+                    //接下来进行瓦片贴图的替换。
+                    Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();
+                    //首先是墙块替换。
+
+                    //从墙块字典里与地板块四个方向的位置匹配一下，如果匹配到位置，就拿着位置找对应的墙块瓦片，然后改变对应贴图。
+
+                    Vector3Int position = new Vector3Int(playerPosition.x, playerPosition.y + 1, playerPosition.z);
+                    if (tileWallDic.ContainsKey(position))
+                    {
+                        foreach (Tilemap tilemap in tilemaps)
+                        {
+                            if (tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
+                            {
+                                TileBase tile = tilemap.GetTile(position);
+                                if (tileWallDic[position][2] == 1)
+                                {
+                                    tilemap.SetTile(position, daSuan2);
+                                }
+                                if (tileWallDic[position][2] == -1)
+                                {
+                                    tilemap.SetTile(position, jiuBei2);
+                                }
+                            }
+                        }
+
+                    }
+                    position = new Vector3Int(playerPosition.x + 1, playerPosition.y, playerPosition.z);
+                    if (tileWallDic.ContainsKey(position))
+                    {
+                        foreach (Tilemap tilemap in tilemaps)
+                        {
+                            if (tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
+                            {
+                                TileBase tile = tilemap.GetTile(position);
+                                if (tileWallDic[position][3] == 1)
+                                {
+                                    tilemap.SetTile(position, daSuan3);
+                                }
+                                if (tileWallDic[position][3] == -1)
+                                {
+                                    tilemap.SetTile(position, jiuBei3);
+                                }
+                            }
+                        }
+
+                    }
+                    position = new Vector3Int(playerPosition.x, playerPosition.y - 1, playerPosition.z);
+                    if (tileWallDic.ContainsKey(position))
+                    {
+                        foreach (Tilemap tilemap in tilemaps)
+                        {
+                            if (tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
+                            {
+                                TileBase tile = tilemap.GetTile(position);
+                                if (tileWallDic[position][0] == 1)
+                                {
+                                    tilemap.SetTile(position, daSuan0);
+                                }
+                                if (tileWallDic[position][0] == -1)
+                                {
+                                    tilemap.SetTile(position, jiuBei0);
+                                }
+                            }
+                        }
+
+                    }
+                    position = new Vector3Int(playerPosition.x - 1, playerPosition.y, playerPosition.z);
+                    if (tileWallDic.ContainsKey(position))
+                    {
+                        foreach (Tilemap tilemap in tilemaps)
+                        {
+                            if(tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
+                            {
+                                TileBase tile = tilemap.GetTile(position);
+                                if (tileWallDic[position][1] == 1)
+                                {
+                                    tilemap.SetTile(position, daSuan1);
+                                }
+                                if (tileWallDic[position][1] == -1)
+                                {
+                                    tilemap.SetTile(position, jiuBei1);
+                                }
+                            }
+
+                        }
+                    }
+
+                    if (cells[playerPosition][2] == 1)
+                    {
+                        print("现在找到了要翻转的+1地毯。");
+                        foreach (Tilemap tilemap in tilemaps)
+                        {
+                            print("现在的tilemap的名字是" + tilemap.gameObject.name);
+                            if (tilemap.gameObject.name == "tileUp")
+                            {
+                                //找这个map里对应的tile并替换
+                                tilemap.SetTile(playerPosition, tileDown);
+                                break;
+                            }
+                        }
+                    }
+
+                    if (cells[playerPosition][2] == -1)
+                    {
+                        print("现在找到了要翻转的-1地毯。");
+                        foreach (Tilemap tilemap in tilemaps)
+                        {
+                            print("现在的tilemap的名字是" + tilemap.gameObject.name);
+                            if (tilemap.gameObject.name == "tileDown")
+                            {
+                                print("已经找到目标tilemap");
+                                //找这个map里对应的tile并替换
+                                tilemap.SetTile(playerPosition, tileUp);
+                                break;
+                            }
+                        }
+                    }
+
+
+
+                    //把上一个地块的数值取反
+                    cells[playerPosition][2] = -cells[playerPosition][2];
+                    cells[playerPosition][3] = -cells[playerPosition][3];
+
+                    //玩家当前所处的位置变为不可到达
+                    cells[playerPosition][1] = 0;
+                    //把上一个不可到达地块的可达性设置为1
+                    cells[bannedPosition][1] = 1;
+                    //把玩家当前所处位置存入不可到达的保留位置
+                    bannedPosition = playerPosition;
+                    //返回 移动是否成功、移动的方向、移动的目标。先不更新玩家位置，等动画播完之后由PlayControl调用本类的changeState来更新。
+
+
                     //判断方向，然后返回给PlayControl。方向的编号与wall的规则类似。见Wallsxxxx脚本。
                     if (clickPosition == p1)
                     {
                         print("p1");
-                        //玩家当前所处的位置变为不可到达
-                        cells[playerPosition][1] = 0;
-                        //把上一个不可到达地块的可达性设置为1
-                        cells[bannedPosition][1] = 1;
-                        //把玩家当前所处位置存入不可到达的保留位置
-                        bannedPosition = playerPosition;
-                        //返回 移动是否成功、移动的方向、移动的目标。先不更新玩家位置，等动画播完之后由PlayControl调用本类的changeState来更新。
-                        return (true, 0, target);
+                         return (true, 0, target);
                     }
                     else if (clickPosition == p2)
                     {
                         print("p2");
-                        cells[playerPosition][1] = 0;
-                        cells[bannedPosition][1] = 1;
-                        bannedPosition = playerPosition;
                         return (true, 1, target);
                     }
                     else if (clickPosition == p3)
                     {
                         print("p3");
-                        cells[playerPosition][1] = 0;
-                        cells[bannedPosition][1] = 1;
-                        bannedPosition = playerPosition;
                         return (true, 2, target);
                     }
                     else if (clickPosition == p4)
                     {
                         print("p4");
-                        cells[playerPosition][1] = 0;
-                        cells[bannedPosition][1] = 1;
-                        bannedPosition = playerPosition;
                         return (true, 3, target);
                     }
                 }
@@ -136,9 +264,6 @@ public class EventDeal : MonoBehaviour
             PlayControl.Instance.isChanging = false;
             UIMgr.Instance.HidePanel<PlayPanel>();
             UIMgr.Instance.ShowPanel<LosePanel>();
-
-            
-
         }
         if(height > 5)
         {
@@ -199,6 +324,18 @@ public class EventDeal : MonoBehaviour
             {
                 endPosition = Vector3Int.CeilToInt(getCellPo(tilemap, true));
             }
+        }
+        int num = 0;
+        foreach(var i in cells)
+        {
+            num++;
+            string list = "";
+            foreach(var j in i.Value)
+            {
+                list += j.ToString();
+                list += ",";
+            }
+            print("这是地图中的第"+num+"个cell："+i +list);
         }
 
 

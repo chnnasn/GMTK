@@ -83,9 +83,6 @@ public class LosePanel : BasePanel
                 UIMgr.Instance.ShowPanel<PlayPanel>();
 
                 break;
-            case "ButtonNext":
-                //µÈ´ý²¹³ä
-                break;
 
         }
     }

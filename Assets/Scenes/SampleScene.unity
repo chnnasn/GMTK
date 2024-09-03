@@ -425,6 +425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b726d89bd211f784cb9b6dd6a4ef0164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: c30f4df20deb70948ba8d1b3388cc6d0, type: 3}
+  cursorPress: {fileID: 2800000, guid: f959398990e58434a952d8803cbd7be4, type: 3}
+  cursorError: {fileID: 0}
 --- !u!81 &1918845152
 AudioListener:
   m_ObjectHideFlags: 0
@@ -441,6 +444,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: daSuan0
+      value: 
+      objectReference: {fileID: 11400000, guid: 359e795e8d6df4e4ca6619a70eac2362, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: daSuan1
+      value: 
+      objectReference: {fileID: 11400000, guid: f6435d0372e4256458ee71f956facea1, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: daSuan2
+      value: 
+      objectReference: {fileID: 11400000, guid: f0321978c7adef64cb95d18c28d15bcc, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: daSuan3
+      value: 
+      objectReference: {fileID: 11400000, guid: c4163bc0dfdbe984d9671f9f48ae55fb, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: jiuBei0
+      value: 
+      objectReference: {fileID: 11400000, guid: b1a1c983f262b00428f597b5bdd3d511, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: jiuBei1
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d528a7b8b2c4a9449cb8969feda8f75, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: jiuBei2
+      value: 
+      objectReference: {fileID: 11400000, guid: 4213e7345c922f74691208df15f47c8d, type: 2}
+    - target: {fileID: 4629775666653834985, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
+      propertyPath: jiuBei3
+      value: 
+      objectReference: {fileID: 11400000, guid: 87df203ad99b36e4b9ee0134f011798b, type: 2}
     - target: {fileID: 6793619972695245933, guid: d242e7c63aa172a43814bdeeb0d0cca8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3267679

@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 
 //在场景之外的时候要通知EventDeal要过场景了，然后EventDeal把这个脚本禁用。
+//这个脚本挂载在角色预制体上。
 public class PlayControl : MonoBehaviour
 {
 
@@ -31,7 +32,6 @@ public class PlayControl : MonoBehaviour
     //这里用元组而不是List，因为该类中的playerState只会整体赋值。
     public (int, int) playerState;
 
-    public float changeTime = 2f;
     public bool isChanging = false;
 
     public List<float> rate = new List<float>() { 0.4f, 0.55f, 0.7f, 0.85f, 1f };
@@ -41,6 +41,15 @@ public class PlayControl : MonoBehaviour
     private Animator animator;
 
     private Vector3 velocity = Vector3.zero;
+
+    public float errorTime = 0.5f;
+
+    public bool isError = false;
+
+    public float errorDuration = 0f;
+
+    public Texture2D cursorError;
+    public Texture2D cursorDefault;
 
     // Start is called before the first frame update
     void Start()
@@ -72,15 +81,16 @@ public class PlayControl : MonoBehaviour
         if (isChanging && playerState.Item2 - 1 >= 0 && playerState.Item2 - 1 < rate.Count && playerState.Item1 - 1 >= 0 && playerState.Item1 - 1 < rate.Count)
         {
 
+            //平滑改变角色的尺寸
             Vector3 scale = new Vector3(rate[playerState.Item2 - 1], rate[playerState.Item1 - 1], 1.0f);
 
             transform.localScale = Vector3.SmoothDamp(transform.localScale, scale, ref velocity, 0.1f);
 
-
+            //平滑改变Hub里的角色尺寸
             Vector3 scale1 = new Vector3(rate[PlayControl.Instance.playerState.Item2 - 1], rate[PlayControl.Instance.playerState.Item1 - 1], 1.0f);
-            PlayPanel.Instance.imageCha.transform.localScale = scale1;
-            Vector3 end = new Vector3(rate[EventDeal.Instance.end.Item2 - 1], rate[EventDeal.Instance.end.Item1 - 1], 1.0f);
-            PlayPanel.Instance.imageImp.transform.localScale = end;
+            PlayPanel.Instance.imageCha.transform.localScale = Vector3.SmoothDamp(transform.localScale, scale1, ref velocity, 0.1f);
+
+
             if (Vector3.Distance(transform.localScale, scale) < 0.01f)
             {
                 isChanging = false;
@@ -99,15 +109,18 @@ public class PlayControl : MonoBehaviour
 
             if (move.Item1)
             {
+                print("现在走的方向是："+ move.Item2);
                 isMoving = true;
                 //在这里根据Item2来控制动画
                 if(move.Item2 == 0 || move.Item2 == 3)
                 {
+                    animator.Play("MovingLeft");
                     animator.SetBool("isMove", true);
                     animator.SetBool("isLeft", true);
                 }
                 if (move.Item2 == 1 || move.Item2 == 2)
                 {
+                    animator.Play("MovingRight");
                     animator.SetBool("isMove", true);
                     animator.SetBool("isLeft", false);
                 }
@@ -119,18 +132,34 @@ public class PlayControl : MonoBehaviour
             }
             else//鼠标指针显示叉
             {
-                //在这里控制动画
+                isError = true;
+
             }
 
         }
 
+        if (isError)
+        {
+            errorDuration += Time.deltaTime;
+            if (errorDuration >= errorTime)
+            {
+                isError = false;
+                errorDuration = 0f;
+                Cursor.SetCursor(cursorDefault, Vector2.zero, CursorMode.Auto);
+            }
+            else
+            {
 
+                Cursor.SetCursor(cursorError, Vector2.zero, CursorMode.Auto);
+            }
 
-
-
-
+        }
 
     }
 
+    public void init()
+    {
+
+    }
 
 }

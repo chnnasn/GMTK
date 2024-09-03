@@ -70,6 +70,7 @@ public class Level : MonoBehaviour
     public void init(Dictionary<Vector3Int, List<int>> walls, (int, int) start, (int, int) end,Grid grid)
     {
         print("level is running");
+        clean();
         //获得地板：
         getCells(tilemapName1, tileStartP);
         getCells(tilemapName2, tileEndP);
@@ -91,7 +92,9 @@ public class Level : MonoBehaviour
             num++;
         });
         print($"本地图地板数量为：{num}");
+
         //然后把处理后的关卡信息传给EventDeal，供游戏过程中进行gameplay
+
         EventDeal.Instance.cells = cells;
         EventDeal.Instance.playerState = new List<int>(){ start.Item1,start.Item2};
         EventDeal.Instance.end = end;
@@ -108,6 +111,9 @@ public class Level : MonoBehaviour
         ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", "MainCamera", (res) => {
             Instantiate(res);
         });
+
+        //在生成完关卡之后，该类的各数据清空，防止影响再次生成关卡
+
     }
 
 
@@ -190,50 +196,43 @@ public class Level : MonoBehaviour
             //墙面不加到cell里，直接在eventdeal里判断cell外的点击无效即可不到达墙面。
             //分别找到墙体四个面的邻近格子是否为地板，有地板就为地板cell的list修改索引3处的内容。
             Vector3Int position = new Vector3Int(t.Key.x, t.Key.y + 1, t.Key.z);
-            print($"当前墙面紧邻位置：{position}");
             if (cells.ContainsKey(position))
             {
-                cells[position][3] = t.Value[0];
+                cells[position][3] += t.Value[0];
 
             }
             position = new Vector3Int(t.Key.x + 1, t.Key.y, t.Key.z);
             if (cells.ContainsKey(position))
             {
-                cells[position][3] = t.Value[1];
+                cells[position][3] += t.Value[1];
 
             }
 
             position = new Vector3Int(t.Key.x, t.Key.y - 1, t.Key.z);
             if (cells.ContainsKey(position))
             {
-                cells[position][3] = t.Value[2];
+                cells[position][3] += t.Value[2];
             }
 
             position = new Vector3Int(t.Key.x - 1, t.Key.y, t.Key.z);
             if (cells.ContainsKey(position))
             {
-                cells[position][3] = t.Value[3];
+                cells[position][3] += t.Value[3];
             }
         }
 
 
     }
 
-    //这个交给EventDeal来调用，结算失败或成功以后调用
     public void clean()
     {
-
-        tileStartP = null;
-        tileEndP = null;
-        tileUpP = null;
-        tileDownP = null;
-        tileNormalP = null;
-
-        tileWallDic = null;
-
-        cells = null;
-
-        EventDeal.Instance.cells = cells;
+        tileStartP?.Clear();
+        tileEndP?.Clear();
+        tileUpP?.Clear();
+        tileDownP?.Clear();
+        tileNormalP?.Clear();
+        tileWallDic?.Clear();
+        cells?.Clear();
     }
 
     public void makeDoor(Grid grid , Vector3Int h, (int, int) end) {
