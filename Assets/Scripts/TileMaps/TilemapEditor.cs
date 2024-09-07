@@ -16,7 +16,6 @@ public class TilemapEditor : MonoBehaviour
 
     public static TilemapEditor instance;
     Grid grid;
-    public Image ui;
     Tilemap tilemap; // 当前 Tilemap 的引用
 
     [HideInInspector]
@@ -48,7 +47,6 @@ public class TilemapEditor : MonoBehaviour
     void Update()
     {
         selectedTile = availableTiles[index];
-        ui.sprite = selectedTile.sprite;
 
         if (Input.GetMouseButtonDown(0))
         {
