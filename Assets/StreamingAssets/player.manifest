@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 2619720905
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5ab5fc5af67b226ca57b5be78e0cffd4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 77ea6529d96b2a8d8baf1cb065f5d2b2
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 5ab5fc5af67b226ca57b5be78e0cffd4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 189d2f1384562dd4385ead2f60bb5429, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/player/PlayerCharacter.prefab
+Dependencies:
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/animation
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/image
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial

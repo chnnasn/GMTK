@@ -1,0 +1,70 @@
+ManifestFileVersion: 0
+CRC: 250899813
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 467855f0d23cb2fbe96e80d3a5bae619
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b90360021f95c293bf3f1bef88434a62
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 467855f0d23cb2fbe96e80d3a5bae619
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/OriginalMaterial/superGarlic-3.png
+- Assets/OriginalMaterial/stone1.png
+- Assets/OriginalMaterial/banned.png
+- Assets/OriginalMaterial/gate.png
+- Assets/OriginalMaterial/lownarrow.png
+- Assets/OriginalMaterial/special1.png
+- Assets/OriginalMaterial/normal1.png
+- Assets/OriginalMaterial/highnarrow.png
+- Assets/OriginalMaterial/lowM.png
+- Assets/OriginalMaterial/Mwide.png
+- Assets/OriginalMaterial/duck.png
+- Assets/OriginalMaterial/desk2.png
+- Assets/OriginalMaterial/Mnarrow.png
+- Assets/OriginalMaterial/carpet+1.png
+- Assets/OriginalMaterial/bone.png
+- "Assets/OriginalMaterial/\u6307\u94882.png"
+- "Assets/OriginalMaterial/\u6307\u94883.png"
+- Assets/OriginalMaterial/tomb.png
+- Assets/OriginalMaterial/special2.png
+- "Assets/OriginalMaterial/\u6307\u94881.png"
+- Assets/OriginalMaterial/superGarlic-2.png
+- Assets/OriginalMaterial/superGarlic-0.png
+- Assets/OriginalMaterial/birdOnOther.png
+- Assets/OriginalMaterial/bloodBeer.png
+- Assets/OriginalMaterial/start.png
+- Assets/OriginalMaterial/SuperRedWine-1.png
+- Assets/OriginalMaterial/desk.png
+- Assets/OriginalMaterial/stone2.png
+- Assets/OriginalMaterial/New Material.mat
+- Assets/OriginalMaterial/SuperRedWine-0.png
+- Assets/OriginalMaterial/garlic-1.png
+- Assets/OriginalMaterial/highM.png
+- Assets/OriginalMaterial/MM.png
+- Assets/OriginalMaterial/carpet-1.png
+- Assets/OriginalMaterial/lowwide.png
+- "Assets/OriginalMaterial/SuperRedWine-0 \u91CD\u53E0.png"
+- Assets/OriginalMaterial/blood+1.png
+- Assets/OriginalMaterial/normal2.png
+- "Assets/OriginalMaterial/superGarlic-0\u91CD\u53E0.png"
+- Assets/OriginalMaterial/highwide.png
+- Assets/OriginalMaterial/normal3.png
+- Assets/OriginalMaterial/fence.png
+- Assets/OriginalMaterial/SuperRedWine-2.png
+- Assets/OriginalMaterial/SuperRedWine-3.png
+- Assets/OriginalMaterial/superGarlic-1.png
+Dependencies: []

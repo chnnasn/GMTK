@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2926321516
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3bb0075d642fc67f822ad2d4f9b11bb8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 33e7d3bfc4cea645191d16fd650062c3
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3bb0075d642fc67f822ad2d4f9b11bb8
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/Animation/SadRight.anim
+- Assets/Editor/ArtRes/Animation/MovingLeft.anim
+- Assets/Editor/ArtRes/Animation/PlayerCharacter.controller
+- Assets/Editor/ArtRes/Animation/ZhaYanLeft.anim
+- Assets/Editor/ArtRes/Animation/SadLeft.anim
+- Assets/Editor/ArtRes/Animation/ZhaYanRight.anim
+- Assets/Editor/ArtRes/Animation/happyRight.anim
+- Assets/Editor/ArtRes/Animation/happyLeft.anim
+- Assets/Editor/ArtRes/Animation/MovingRight.anim
+Dependencies:
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/image

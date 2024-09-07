@@ -75,9 +75,9 @@ public class WinPanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO(levelName);
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO(levelName);
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 
                 break;
             case "ButtonNext":
@@ -92,10 +92,10 @@ public class WinPanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
-                });
-                Level.Instance.setPO(LevelDataMgr.Instance.levels[++num]);
+                    Level.Instance.setPO(LevelDataMgr.Instance.levels[++num]);
 
-                UIMgr.Instance.ShowPanel<PlayPanel>();
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
+                });
                 break;
 
         }

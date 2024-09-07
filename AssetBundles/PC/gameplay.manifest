@@ -1,0 +1,104 @@
+ManifestFileVersion: 0
+CRC: 3472330093
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d9fb00bfe5c77acb86de3b884cc778b9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8ea09157fc72ae1239301b0843bc3210
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: d9fb00bfe5c77acb86de3b884cc778b9
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 06209e620f36ade42914b3c9893eb331, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0ea27c6cbe49e1c40850c3bc0677060e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ae5dfa558219b694bad8f5ad149de67f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 863908f83e816534cae47762a62c0727, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 962e6e42080a4a4429eaf25a25071481, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6cb0be120ab1f084e8bc2fd18bbc3d34, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 72c6c497a0825ef48837fb7b138d8614, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f145e71eda5d2d14cb0fff6bf7673f31, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9557f0de282ccc34cb99b7cfaf15363f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 160924a0d24e09e418156b2ca610212d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 92eafc03f5024b344ab6f84387881a26, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9ef58ad2138e3f5429645350e0b875b3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 34062f91d92f91f4db8513a1d8468351, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 720f6c0d4442828419b1a6651db47937, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 15b86e2a7420ae949b6bae6d35e4830f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 46e686c5c9e9c7240b23b022418c8980, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 156049354
+  Script: {instanceID: 0}
+- Class: 483693784
+  Script: {instanceID: 0}
+- Class: 1839735485
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.RenderPipelines.Universal.Runtime
+  ClassName: UnityEngine.Rendering.Universal.TemporalAA/Settings
+Assets:
+- Assets/Editor/ArtRes/gameplay/0504.prefab
+- Assets/Editor/ArtRes/gameplay/MainCamera.prefab
+- Assets/Editor/ArtRes/gameplay/0101.prefab
+- Assets/Editor/ArtRes/gameplay/0204.prefab
+- Assets/Editor/ArtRes/gameplay/0401.prefab
+- Assets/Editor/ArtRes/gameplay/0301.prefab
+- Assets/Editor/ArtRes/gameplay/Level.prefab
+- Assets/Editor/ArtRes/gameplay/0303.prefab
+- Assets/Editor/ArtRes/gameplay/0501.prefab
+- Assets/Editor/ArtRes/gameplay/0506.prefab
+- Assets/Editor/ArtRes/gameplay/0403.prefab
+- Assets/Editor/ArtRes/gameplay/0507.prefab
+- Assets/Editor/ArtRes/gameplay/0502.prefab
+- Assets/Editor/ArtRes/gameplay/CameraControl.prefab
+- Assets/Editor/ArtRes/gameplay/0201.prefab
+- Assets/Editor/ArtRes/gameplay/0402.prefab
+- Assets/Editor/ArtRes/gameplay/0305.prefab
+- Assets/Editor/ArtRes/gameplay/0202.prefab
+- Assets/Editor/ArtRes/gameplay/0304.prefab
+- Assets/Editor/ArtRes/gameplay/0302.prefab
+- Assets/Editor/ArtRes/gameplay/0505.prefab
+- Assets/Editor/ArtRes/gameplay/0503.prefab
+- Assets/Editor/ArtRes/gameplay/0508.prefab
+- Assets/Editor/ArtRes/gameplay/EventDeal.prefab
+- Assets/Editor/ArtRes/gameplay/GridTemplate.prefab
+- Assets/Editor/ArtRes/gameplay/0203.prefab
+Dependencies:
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/iso
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/player

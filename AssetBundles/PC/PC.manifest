@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+CRC: 3743838526
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui
+      Dependencies:
+        Dependency_0: image
+        Dependency_1: music
+        Dependency_2: originalmaterial
+    Info_1:
+      Name: everything
+      Dependencies: {}
+    Info_2:
+      Name: scene
+      Dependencies:
+        Dependency_0: ui
+        Dependency_1: gameplay
+        Dependency_2: image
+        Dependency_3: iso
+        Dependency_4: originalmaterial
+    Info_3:
+      Name: gameplay
+      Dependencies:
+        Dependency_0: iso
+        Dependency_1: player
+        Dependency_2: originalmaterial
+    Info_4:
+      Name: animation
+      Dependencies:
+        Dependency_0: image
+    Info_5:
+      Name: image
+      Dependencies: {}
+    Info_6:
+      Name: iso
+      Dependencies:
+        Dependency_0: originalmaterial
+    Info_7:
+      Name: music
+      Dependencies: {}
+    Info_8:
+      Name: player
+      Dependencies:
+        Dependency_0: animation
+        Dependency_1: image
+        Dependency_2: originalmaterial
+    Info_9:
+      Name: originalmaterial
+      Dependencies: {}

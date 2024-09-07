@@ -71,6 +71,7 @@ public class Level : MonoBehaviour
     {
         print("level is running");
         clean();
+        StartCoroutine(ReadJsonFile());
         //获得地板：
         getCells(tilemapName1, tileStartP);
         getCells(tilemapName2, tileEndP);
@@ -250,8 +251,8 @@ public class Level : MonoBehaviour
         print($"门的世界坐标：{position}，瓦片坐标：{tileEndP[0]}，门的缩放：{scale}");
     }
 
-        private IEnumerator ReadJsonFile()
-        {
+    private IEnumerator ReadJsonFile()
+    {
         string uri = Path.Combine(Application.streamingAssetsPath, "levels.json");
 
         UnityWebRequest request = UnityWebRequest.Get(uri);
@@ -280,7 +281,7 @@ public class Level : MonoBehaviour
         }
 
         yield break;
-        }
+    }
 
     public void setPO(string key) {
         init(nameValueMap[key],(startAndEndMap[key][0], startAndEndMap[key][1]), (startAndEndMap[key][2], startAndEndMap[key][3]), GameObject.FindFirstObjectByType<Grid>());

@@ -37,8 +37,9 @@ public class EventDeal : MonoBehaviour
     public Vector3Int endPosition;
     public Vector3Int startPosition;
     //由于刚走过所以被禁用的格子
+
     public Vector3Int bannedPosition;
-    //依次是：大蒜的0到3，酒杯的0到3
+    //依次是：大蒜的0到3，酒杯的0到3的精灵资源
     public TileBase daSuan0;
     public TileBase daSuan1;
     public TileBase daSuan2;
@@ -71,111 +72,42 @@ public class EventDeal : MonoBehaviour
             Vector3Int p4 = new Vector3Int(playerPosition.x-1, playerPosition.y, playerPosition.z);
 
             print($"p1位置：{p1}");
-            print($"p1位置：{p2}");
-            print($"p1位置：{p3}");
-            print($"p1位置：{p4}");
+            print($"p2位置：{p2}");
+            print($"p3位置：{p3}");
+            print($"p4位置：{p4}");
 
-            //根据cell的值的列表的可达性元素来判断可达性
+            //根据cell的值的列表的可达性位置来判断可达性
             if (cells[clickPosition][1] == 1){
-                print("yes1");
+                print("当前位置可达");
                 //判断是否是起点
-                if (clickPosition != startPosition) {
+                if (clickPosition != startPosition && clickPosition != playerPosition) {
+                    print("当前cell可以走，其属性：" + string.Join(",", cells[clickPosition]));
                     //接下来进行瓦片贴图的替换。
                     Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();
                     //首先是墙块替换。
 
                     //从墙块字典里与地板块四个方向的位置匹配一下，如果匹配到位置，就拿着位置找对应的墙块瓦片，然后改变对应贴图。
+                    //为了保证替的候替换的素材是正确朝向的素材，此处采用渲染层级来判断素材朝向。
+                    //规则：层级5：方向1；层级6：方向0；层级7：方向2；层级8：方向3；
+                    //方向0：层级6
+                    //方向1：层级5
+                    //方向2：层级7
+                    //方向3：层级8
+                    tileChange(new Vector3Int(0, 1, 0), 2, daSuan2, jiuBei2, 7,tilemaps);
+                    tileChange(new Vector3Int(1, 0, 0), 3, daSuan3, jiuBei3, 8, tilemaps);
+                    tileChange(new Vector3Int(0, -1, 0), 0, daSuan0, jiuBei0, 6, tilemaps);
+                    tileChange(new Vector3Int(-1, 0, 0), 1, daSuan1, jiuBei1, 5, tilemaps);
 
-                    Vector3Int position = new Vector3Int(playerPosition.x, playerPosition.y + 1, playerPosition.z);
-                    if (tileWallDic.ContainsKey(position))
-                    {
-                        foreach (Tilemap tilemap in tilemaps)
-                        {
-                            if (tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
-                            {
-                                TileBase tile = tilemap.GetTile(position);
-                                if (tileWallDic[position][2] == 1)
-                                {
-                                    tilemap.SetTile(position, daSuan2);
-                                }
-                                if (tileWallDic[position][2] == -1)
-                                {
-                                    tilemap.SetTile(position, jiuBei2);
-                                }
-                            }
-                        }
-
-                    }
-                    position = new Vector3Int(playerPosition.x + 1, playerPosition.y, playerPosition.z);
-                    if (tileWallDic.ContainsKey(position))
-                    {
-                        foreach (Tilemap tilemap in tilemaps)
-                        {
-                            if (tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
-                            {
-                                TileBase tile = tilemap.GetTile(position);
-                                if (tileWallDic[position][3] == 1)
-                                {
-                                    tilemap.SetTile(position, daSuan3);
-                                }
-                                if (tileWallDic[position][3] == -1)
-                                {
-                                    tilemap.SetTile(position, jiuBei3);
-                                }
-                            }
-                        }
-
-                    }
-                    position = new Vector3Int(playerPosition.x, playerPosition.y - 1, playerPosition.z);
-                    if (tileWallDic.ContainsKey(position))
-                    {
-                        foreach (Tilemap tilemap in tilemaps)
-                        {
-                            if (tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
-                            {
-                                TileBase tile = tilemap.GetTile(position);
-                                if (tileWallDic[position][0] == 1)
-                                {
-                                    tilemap.SetTile(position, daSuan0);
-                                }
-                                if (tileWallDic[position][0] == -1)
-                                {
-                                    tilemap.SetTile(position, jiuBei0);
-                                }
-                            }
-                        }
-
-                    }
-                    position = new Vector3Int(playerPosition.x - 1, playerPosition.y, playerPosition.z);
-                    if (tileWallDic.ContainsKey(position))
-                    {
-                        foreach (Tilemap tilemap in tilemaps)
-                        {
-                            if(tilemap.GetComponent<TilemapRenderer>().sortingOrder == 5)
-                            {
-                                TileBase tile = tilemap.GetTile(position);
-                                if (tileWallDic[position][1] == 1)
-                                {
-                                    tilemap.SetTile(position, daSuan1);
-                                }
-                                if (tileWallDic[position][1] == -1)
-                                {
-                                    tilemap.SetTile(position, jiuBei1);
-                                }
-                            }
-
-                        }
-                    }
-
+                    //然后来改地板
                     if (cells[playerPosition][2] == 1)
                     {
                         print("现在找到了要翻转的+1地毯。");
                         foreach (Tilemap tilemap in tilemaps)
                         {
-                            print("现在的tilemap的名字是" + tilemap.gameObject.name);
-                            if (tilemap.gameObject.name == "tileUp")
+                            if (tilemap.gameObject.name == "tileUp"|| tilemap.gameObject.name == "tileDown")
                             {
                                 //找这个map里对应的tile并替换
+                                print("替换成高度下降的地毯");
                                 tilemap.SetTile(playerPosition, tileDown);
                                 break;
                             }
@@ -187,11 +119,10 @@ public class EventDeal : MonoBehaviour
                         print("现在找到了要翻转的-1地毯。");
                         foreach (Tilemap tilemap in tilemaps)
                         {
-                            print("现在的tilemap的名字是" + tilemap.gameObject.name);
-                            if (tilemap.gameObject.name == "tileDown")
+                            if (tilemap.gameObject.name == "tileDown"|| tilemap.gameObject.name == "tileUp")
                             {
-                                print("已经找到目标tilemap");
                                 //找这个map里对应的tile并替换
+                                print("替换成高度上升的地毯");
                                 tilemap.SetTile(playerPosition, tileUp);
                                 break;
                             }
@@ -203,17 +134,19 @@ public class EventDeal : MonoBehaviour
                     //把上一个地块的数值取反
                     cells[playerPosition][2] = -cells[playerPosition][2];
                     cells[playerPosition][3] = -cells[playerPosition][3];
+                    print("上一个地板的数值已经取反。高的改变值为" + cells[playerPosition][2] + "宽的改变值为" + cells[playerPosition][3]);
 
-                    //玩家当前所处的位置变为不可到达
-                    cells[playerPosition][1] = 0;
+
                     //把上一个不可到达地块的可达性设置为1
                     cells[bannedPosition][1] = 1;
+                    //玩家当前所处的位置变为不可到达
+                    cells[playerPosition][1] = 0;
                     //把玩家当前所处位置存入不可到达的保留位置
                     bannedPosition = playerPosition;
                     //返回 移动是否成功、移动的方向、移动的目标。先不更新玩家位置，等动画播完之后由PlayControl调用本类的changeState来更新。
 
 
-                    //判断方向，然后返回给PlayControl。方向的编号与wall的规则类似。见Wallsxxxx脚本。
+                    //判断方向，然后返回给PlayControl。方向的编号与wall的规则相同。见Wallsxxxx脚本。
                     if (clickPosition == p1)
                     {
                         print("p1");
@@ -264,6 +197,7 @@ public class EventDeal : MonoBehaviour
             PlayControl.Instance.isChanging = false;
             UIMgr.Instance.HidePanel<PlayPanel>();
             UIMgr.Instance.ShowPanel<LosePanel>();
+            
         }
         if(height > 5)
         {
@@ -410,6 +344,35 @@ public class EventDeal : MonoBehaviour
 
         // 如果未找到目标瓦片或Tilemap为空，返回默认值
         return Vector3.zero;  // 使用Vector3.zero返回一个(0,0,0)的默认向量
+    }
+
+    void tileChange(Vector3Int offset,int index,TileBase daSuan,TileBase jiuBei,int sortingOrder, Tilemap[] tilemaps)
+    {
+        Vector3Int position = new Vector3Int(playerPosition.x + offset.x, playerPosition.y + offset.y, playerPosition.z + offset.z);
+        if (tileWallDic.ContainsKey(position))
+        {
+            foreach (Tilemap tilemap in tilemaps)
+            {
+                int order = tilemap.GetComponent<TilemapRenderer>().sortingOrder;
+                if (order == sortingOrder)
+                {
+                    print("上个地板附近的砖块满足需求，应该被替换。");
+                    if (tileWallDic[position][index] == 1)
+                    {
+                        print("这个砖块是酒杯，要被换成大蒜");
+                        tileWallDic[position][index] = -1;
+                        tilemap.SetTile(position, daSuan);
+                    }
+                    else if (tileWallDic[position][index] == -1)
+                    {
+
+                        print("这个砖块是大蒜，要被换成酒杯");
+                        tileWallDic[position][index] = 1;
+                        tilemap.SetTile(position, jiuBei);
+                    }
+                }
+            }
+        }
     }
 
 }

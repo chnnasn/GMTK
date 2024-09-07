@@ -103,11 +103,11 @@ public class PlayPanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
-                });
-                Level.Instance.setPO(levelName);
+                    Level.Instance.setPO(levelName);
 
-                transform.GetChild(4).localScale = new Vector3(1,1,1);
-                UIMgr.Instance.ShowPanel<PlayPanel>();
+                    transform.GetChild(4).localScale = new Vector3(1, 1, 1);
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
+                });
 
                 break;
 

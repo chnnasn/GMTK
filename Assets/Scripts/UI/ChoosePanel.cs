@@ -39,19 +39,20 @@ public class ChoosePanel : BasePanel
                 {   
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0101");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0101");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0201":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
+
                 ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", "0201", (res) => 
                 {   
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0201");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 }); 
-                Level.Instance.setPO("0201");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
 
             case "Button0202":
@@ -60,9 +61,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0202");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0202");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0203":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -70,9 +71,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0203");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0203");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0204":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -80,9 +81,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0204");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0204");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0301":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -90,9 +91,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0301");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0301");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0302":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -100,9 +101,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0302");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0302");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0303":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -110,9 +111,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0303");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0303");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0304":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -120,9 +121,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0304");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0304");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0305":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -130,9 +131,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0305");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0305");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0401":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -140,9 +141,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0401");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0401");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
 
             case "Button0402":
@@ -151,9 +152,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0402");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0402");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
 
             case "Button0403":
@@ -162,9 +163,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0403");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0403");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
 
             case "Button0501":
@@ -173,9 +174,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0501");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0501");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0502":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -183,9 +184,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0502");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0502");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0503":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -193,9 +194,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0503");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0503");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0504":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -203,9 +204,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0504");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0504");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0505":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -213,9 +214,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0505");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0505");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0506":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -223,9 +224,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0506");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0506");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0507":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -233,9 +234,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0507");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0507");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
             case "Button0508":
                 UIMgr.Instance.HidePanel<ChoosePanel>();
@@ -243,9 +244,9 @@ public class ChoosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0508");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0508");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
 
             case "ButtonBack":

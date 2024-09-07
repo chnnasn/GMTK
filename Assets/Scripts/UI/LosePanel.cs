@@ -78,9 +78,9 @@ public class LosePanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO(levelName);
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO(levelName);
-                UIMgr.Instance.ShowPanel<PlayPanel>();
 
                 break;
 

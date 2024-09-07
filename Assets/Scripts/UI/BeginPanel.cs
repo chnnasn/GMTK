@@ -45,9 +45,9 @@ public class BeginPanel : BasePanel
                 {
                     Instantiate(res);
                     EventDeal.Instance.grid = res.GetComponent<Grid>();
+                    Level.Instance.setPO("0101");
+                    UIMgr.Instance.ShowPanel<PlayPanel>();
                 });
-                Level.Instance.setPO("0101");
-                UIMgr.Instance.ShowPanel<PlayPanel>();
                 break;
 
             case "ButtonQuit":

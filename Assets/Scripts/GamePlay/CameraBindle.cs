@@ -20,6 +20,7 @@ public class CameraBindle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        target = CameraControl.Instance.target;
         if (target != null)
         {
             Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);

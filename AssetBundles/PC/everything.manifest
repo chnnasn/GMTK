@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 160215022
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2d91fdc7382df3db54f2154a541babab
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8b8448c7b696490ac5d512ac9b401452
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 2d91fdc7382df3db54f2154a541babab
+HashAppended: 0
+ClassTypes:
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/PlayerCharacter.controller
+- Assets/GameObject.controller
+Dependencies: []

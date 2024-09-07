@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 2215972209
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9c2d2cdfc0016e9246d1573068e96ceb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 9c2d2cdfc0016e9246d1573068e96ceb
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/sound/hit_4.mp3
+- Assets/Editor/ArtRes/music/Begin.mp3
+- "Assets/Editor/ArtRes/music/\u79FB\u52A8\uFF08\u6839\u636E\u5177\u4F53\u60C5\u51B5\u518D\u8C03\u6574\u901F\u5EA6\u548C\u65F6\u95F4\uFF09.mp3"
+- "Assets/Editor/ArtRes/music/\u9009\u62E9.mp3"
+- "Assets/Editor/ArtRes/music/\u6210\u529F.mp3"
+- "Assets/Editor/ArtRes/music/\u6682\u5B9A\u7684\u8FDB\u5165\u5173\u5361\u524D\u97F3\u6548.mp3"
+- "Assets/Editor/ArtRes/music/\u5931\u8D251.mp3"
+- "Assets/Editor/ArtRes/music/\u5173\u5361\u5916\u80CC\u666F\u97F3\u4E50.mp3"
+- "Assets/Editor/ArtRes/music/\u5173\u5361\u5185\u80CC\u666F\u97F3\u4E50.mp3"
+Dependencies: []

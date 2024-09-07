@@ -1,18 +1,22 @@
 ManifestFileVersion: 0
-CRC: 1387957853
+CRC: 2840918285
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dcac03aab318c0e2e5cc7243b40763b4
+    Hash: 3c38492d392f042b11f89f012f0eef8d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d58daa3d76ab6acf78bc7b961ab95026
+    Hash: 2185f17de9edcc106aa339272856a18f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: dcac03aab318c0e2e5cc7243b40763b4
+    Hash: 3c38492d392f042b11f89f012f0eef8d
 HashAppended: 0
 ClassTypes:
 - Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -20,22 +24,48 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 114
-  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 400abf38fd4e2b54e8158e231db2908c, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f2bb7d7e019b3544db34c583c059987d, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: d2b60e84de7178542bec46e030245766, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 59eef7f46745cf347928a4faf6d4e8a1, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 12f6a32ea51a34e46978b071a7a5aed5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: d3bb070acd792eb4ab2324903e614f78, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5ca9150e813fd3b46a6af64caa6f8f3f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1d3276280578256489dd1a5bdb4528e5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e1304536ed6e89247a7c81ef0d919fb9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3678c4bb02be8674cb275427847ca801, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -43,6 +73,8 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 - Class: 222
+  Script: {instanceID: 0}
+- Class: 223
   Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
@@ -90,48 +122,21 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.SpriteState
 Assets:
-- Assets/OriginalMaterial/superGarlic-3.png
-- Assets/OriginalMaterial/stone1.png
-- Assets/OriginalMaterial/banned.png
-- Assets/OriginalMaterial/gate.png
-- Assets/OriginalMaterial/lownarrow.png
-- Assets/OriginalMaterial/special1.png
-- Assets/OriginalMaterial/normal1.png
-- Assets/OriginalMaterial/highnarrow.png
-- Assets/OriginalMaterial/lowM.png
-- Assets/OriginalMaterial/Mwide.png
-- Assets/OriginalMaterial/duck.png
-- Assets/OriginalMaterial/desk2.png
-- Assets/OriginalMaterial/Mnarrow.png
-- Assets/OriginalMaterial/carpet+1.png
-- Assets/OriginalMaterial/bone.png
-- Assets/OriginalMaterial/tomb.png
-- Assets/OriginalMaterial/special2.png
-- Assets/OriginalMaterial/superGarlic-2.png
 - Assets/Editor/ArtRes/ui/BeginPanel.prefab
-- Assets/OriginalMaterial/superGarlic-0.png
-- Assets/OriginalMaterial/birdOnOther.png
-- Assets/OriginalMaterial/bloodBeer.png
-- Assets/OriginalMaterial/start.png
-- Assets/OriginalMaterial/SuperRedWine-1.png
-- Assets/OriginalMaterial/desk.png
-- Assets/OriginalMaterial/stone2.png
-- Assets/OriginalMaterial/New Material.mat
-- Assets/OriginalMaterial/SuperRedWine-0.png
-- Assets/OriginalMaterial/garlic-1.png
-- Assets/OriginalMaterial/highM.png
-- Assets/OriginalMaterial/MM.png
-- Assets/OriginalMaterial/carpet-1.png
-- Assets/OriginalMaterial/lowwide.png
-- Assets/OriginalMaterial/blood+1.png
+- Assets/Resources/Sound/soundObj.prefab
+- Assets/Editor/ArtRes/ui/PeoplePanel.prefab
+- Assets/Editor/ArtRes/ui/HelpPanel.prefab
+- Assets/Editor/ArtRes/ui/SettingPanel.prefab
+- Assets/Resources/UI/UICamera.prefab
+- Assets/Resources/UI/Canvas.prefab
+- Assets/Resources/UI/EventSystem.prefab
 - Assets/Editor/ArtRes/ui/ChoosePanel.prefab
-- Assets/OriginalMaterial/normal2.png
-- Assets/OriginalMaterial/highwide.png
-- Assets/OriginalMaterial/normal3.png
-- Assets/OriginalMaterial/fence.png
-- Assets/OriginalMaterial/SuperRedWine-2.png
-- Assets/OriginalMaterial/SuperRedWine-3.png
+- Assets/Editor/ArtRes/ui/PanelGate.prefab
+- Assets/Editor/ArtRes/ui/PlayPanel.prefab
+- Assets/Editor/ArtRes/ui/LosePanel.prefab
+- Assets/Editor/ArtRes/ui/WinPanel.prefab
 - Assets/Editor/ArtRes/ui/PassPanel.prefab
-- Assets/OriginalMaterial/superGarlic-1.png
 Dependencies:
-- E:/UnityProject/GMTKGoGo/AssetBundles/StandaloneWindows/everything
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/image
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/music
+- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
