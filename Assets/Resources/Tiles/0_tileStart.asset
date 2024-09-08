@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: superGarlic-0
+  m_Name: 0_tileStart
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 8f8ecaf5a4a72f64389c6d0d63542aeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d301fdd34eed394abf28f519f837182, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

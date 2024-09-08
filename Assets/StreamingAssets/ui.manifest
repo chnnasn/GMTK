@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2840918285
+CRC: 1600587336
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3c38492d392f042b11f89f012f0eef8d
+    Hash: a77c901d34c5c7d536f45f52a7c1334f
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2185f17de9edcc106aa339272856a18f
+    Hash: afdb197d3dcdbe32d87eaaeb29fb7935
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 3c38492d392f042b11f89f012f0eef8d
+    Hash: a77c901d34c5c7d536f45f52a7c1334f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -66,6 +66,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: e1304536ed6e89247a7c81ef0d919fb9, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3678c4bb02be8674cb275427847ca801, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dcb3094ed8b989a4d95b32f97fa2cd7c, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -124,6 +126,7 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/Editor/ArtRes/ui/BeginPanel.prefab
 - Assets/Resources/Sound/soundObj.prefab
+- Assets/Editor/ArtRes/ui/BuildPanel.prefab
 - Assets/Editor/ArtRes/ui/PeoplePanel.prefab
 - Assets/Editor/ArtRes/ui/HelpPanel.prefab
 - Assets/Editor/ArtRes/ui/SettingPanel.prefab
@@ -137,6 +140,6 @@ Assets:
 - Assets/Editor/ArtRes/ui/WinPanel.prefab
 - Assets/Editor/ArtRes/ui/PassPanel.prefab
 Dependencies:
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/image
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/music
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/image"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/music"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"

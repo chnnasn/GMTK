@@ -109,11 +109,24 @@ public class Level : MonoBehaviour
 
             CameraControl.Instance.target = player.transform;
         });
+
         ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", "MainCamera", (res) => {
             Instantiate(res);
         });
 
         //在生成完关卡之后，该类的各数据清空，防止影响再次生成关卡
+
+    }
+
+    public void makeBulidEnvironment() {
+
+        ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", "TileMapManager", (res) => {
+            Instantiate(res);
+        });
+
+        ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", "MainCamera", (res) => {
+            Instantiate(res);
+        });
 
     }
 
@@ -253,7 +266,7 @@ public class Level : MonoBehaviour
 
     private IEnumerator ReadJsonFile()
     {
-        string uri = Path.Combine(Application.streamingAssetsPath, "levels.json");
+        string uri = Path.Combine(Application.dataPath, "Editor", "ArtRes", "ExcelAndJson", "levels.json");
 
         UnityWebRequest request = UnityWebRequest.Get(uri);
 

@@ -3,13 +3,13 @@ CRC: 3472330093
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d9fb00bfe5c77acb86de3b884cc778b9
+    Hash: 73f64f07493d466f4436079b47d25e10
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8ea09157fc72ae1239301b0843bc3210
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: d9fb00bfe5c77acb86de3b884cc778b9
+    Hash: 73f64f07493d466f4436079b47d25e10
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -99,6 +99,6 @@ Assets:
 - Assets/Editor/ArtRes/gameplay/GridTemplate.prefab
 - Assets/Editor/ArtRes/gameplay/0203.prefab
 Dependencies:
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/iso
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/player
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/iso"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/player"

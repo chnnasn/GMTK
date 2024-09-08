@@ -3,13 +3,13 @@ CRC: 2619720905
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5ab5fc5af67b226ca57b5be78e0cffd4
+    Hash: c0d94dae45646a0ffedcc115be9b024e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 77ea6529d96b2a8d8baf1cb065f5d2b2
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 5ab5fc5af67b226ca57b5be78e0cffd4
+    Hash: c0d94dae45646a0ffedcc115be9b024e
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -38,6 +38,6 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Editor/ArtRes/player/PlayerCharacter.prefab
 Dependencies:
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/animation
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/image
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/animation"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/image"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"

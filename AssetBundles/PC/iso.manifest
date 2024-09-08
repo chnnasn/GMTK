@@ -3,13 +3,13 @@ CRC: 3543932575
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 48f33500fa93057b43a2e1a9abb356d3
+    Hash: c23ec273b08f701d466ded529b23e717
   TypeTreeHash:
     serializedVersion: 2
     Hash: 68738882dee87240b4ba7e08831f22ce
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 48f33500fa93057b43a2e1a9abb356d3
+    Hash: c23ec273b08f701d466ded529b23e717
 HashAppended: 0
 ClassTypes:
 - Class: 114
@@ -62,4 +62,4 @@ Assets:
 - Assets/Editor/ArtRes/ISO/SuperRedWine-1.asset
 - Assets/Editor/ArtRes/ISO/start.asset
 Dependencies:
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"

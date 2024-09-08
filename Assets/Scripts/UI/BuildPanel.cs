@@ -5,7 +5,6 @@ using UnityEngine;
 public class BuildPanel : BasePanel
 {
 
-    private string levelName = "";
     public static BuildPanel Instance { get; private set; }
 
     void Awake()
@@ -33,9 +32,7 @@ public class BuildPanel : BasePanel
 
     public override void ShowMe()
     {
-        //显示PlayPanel时直接设定门的尺寸
-        Vector3 end = new Vector3(rate[EventDeal.Instance.end.Item2 - 1], rate[EventDeal.Instance.end.Item1 - 1], 1.0f);
-        imageImp.transform.localScale = end;
+    
     }
 
     // Start is called before the first frame update
@@ -53,62 +50,64 @@ public class BuildPanel : BasePanel
 
     protected override void ClickBtn(string btnName)
     {
-        Grid levelGrid = FindObjectOfType<Grid>();
+        TilemapEditor levelGrid = FindObjectOfType<TilemapEditor>();
 
         GameObject levelNow = levelGrid.gameObject;
-        levelName = levelNow.name;
-        int lengthToKeep = levelName.Length - 7;//此处的7是为了截掉(clone)字样
-        levelName = levelName.Substring(0, lengthToKeep);
-
-        PlayControl player = FindObjectOfType<PlayControl>();
-        GameObject playerNow = player.gameObject;
 
         CameraBindle mainCamera = FindObjectOfType<CameraBindle>();
         GameObject cameraNow = mainCamera.gameObject;
-
-        PlayControl.Instance.isChanging = false;
-        UIMgr.Instance.HidePanel<PlayPanel>();
-
-        if (levelGrid != null)
-        {
-            Destroy(levelNow);
-        }
-        if (playerNow != null)
-        {
-            Destroy(playerNow);
-            PlayControl.Instance = null;
-        }
-        if (cameraNow != null)
-        {
-            Destroy(cameraNow);
-        }
-        if (Level.Instance.spriteObject != null)
-        {
-            Destroy(Level.Instance.spriteObject);
-        }
 
         switch (btnName)
         {
             case "ButtonBack":
 
-                UIMgr.Instance.ShowPanel<ChoosePanel>();
-                UIMgr.Instance.HidePanel<LosePanel>();
-                UIMgr.Instance.HidePanel<PlayPanel>();
+                UIMgr.Instance.ShowPanel<BeginPanel>();
+                Destroy(cameraNow);
+                Destroy(levelNow);
+                UIMgr.Instance.HidePanel<BuildPanel>();
 
                 break;
-            case "ButtonAgain":
-                //print("你点了BUttonAgain!");
-                UIMgr.Instance.HidePanel<LosePanel>();
-                ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", levelName, (res) =>
-                {
-                    Instantiate(res);
-                    EventDeal.Instance.grid = res.GetComponent<Grid>();
-                    Level.Instance.setPO(levelName);
+            case "ButtonSave":
+                UIMgr.Instance.HidePanel<BuildPanel>();
+                Destroy(cameraNow);
+                Destroy(levelNow);
+                //UIMgr.Instance.ShowPanel<>();
 
-                    transform.GetChild(4).localScale = new Vector3(1, 1, 1);
-                    UIMgr.Instance.ShowPanel<PlayPanel>();
-                });
-
+                break;
+            case "start":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 0;
+                break;
+            case "end":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 1;
+                break;
+            case "floor":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 2;
+                break;
+            case "blueCarpet":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 3;
+                break;
+            case "orangeCarpet":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 4;
+                break;
+            case "deskBu":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 5;
+                break;
+            case "redWine":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 6;
+                break;
+            case "garlic":
+                TilemapEditor.instance.state = NewState.build;
+                TilemapEditor.instance.index = 7;
+                break;
+            case "remove":
+                TilemapEditor.instance.state = NewState.select;
                 break;
 
         }

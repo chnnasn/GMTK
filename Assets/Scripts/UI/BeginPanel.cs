@@ -53,6 +53,11 @@ public class BeginPanel : BasePanel
             case "ButtonQuit":
                 Application.Quit();
                 break;
+            case "ButtonBuild":
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                Level.Instance.makeBulidEnvironment();
+                UIMgr.Instance.ShowPanel<BuildPanel>();
+                break;
 
 
         }
