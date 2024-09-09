@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class ButtonEvent : MonoBehaviour, IPointerClickHandler
+public class ButtonEvent : MonoBehaviour
 {
 
 
@@ -16,12 +15,36 @@ public class ButtonEvent : MonoBehaviour, IPointerClickHandler
     // Update is called once per frame
     void Update()
     {
-         
+
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    //public void OnPointerClick(PointerEventData eventData)
+    //{
+    //    if (transform.name == "SaveThis") {
+
+    //    }
+    //    if (transform.name == "save") {
+    //        //SavePanel.instance.SaveTilemapData();
+    //    }
+    //    if (transform.name == "remove") {
+    //        //SavePanel.instance.SaveTilemapData();
+    //    }
+
+    //}
+
+    public void SaveThis() {
+        SavePanel.instance.SaveTilemapData();
+    }
+
+    public void ReMove() {
+        SavePanel.instance.ReMove(transform.parent.parent.GetSiblingIndex());
+
+    }
+
+    public void OldGame()
     {
         
 
     }
+
 }

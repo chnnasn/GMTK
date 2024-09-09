@@ -60,7 +60,7 @@ public class BuildPanel : BasePanel
         switch (btnName)
         {
             case "ButtonBack":
-
+                TilemapEditor.instance.state = NewState.nothing;
                 UIMgr.Instance.ShowPanel<BeginPanel>();
                 Destroy(cameraNow);
                 Destroy(levelNow);
@@ -68,10 +68,13 @@ public class BuildPanel : BasePanel
 
                 break;
             case "ButtonSave":
-                UIMgr.Instance.HidePanel<BuildPanel>();
+                TilemapEditor.instance.state = NewState.nothing;
+                UIMgr.Instance.ShowPanel<SavePanel>();
+                SavePanel.instance.Save();
+
                 Destroy(cameraNow);
-                Destroy(levelNow);
-                //UIMgr.Instance.ShowPanel<>();
+
+                UIMgr.Instance.HidePanel<BuildPanel>();
 
                 break;
             case "start":
