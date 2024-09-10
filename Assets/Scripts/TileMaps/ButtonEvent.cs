@@ -1,49 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 
-public class ButtonEvent : MonoBehaviour, IPointerClickHandler
+public class ButtonEvent : MonoBehaviour
 {
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        UIMgr.Instance.ShowPanel<BuildPanel>();
     }
 
     // Update is called once per frame
     void Update()
     {
-         
+
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+
+    public void SaveThis() {
+        SavePanel.instance.SaveTilemapData(-1);
+    }
+
+    public void ReMove() {
+        SavePanel.instance.ReMove(transform.parent.parent.GetSiblingIndex());
+
+    }
+
+    public void save() {
+        SavePanel.instance.SaveBuildGame.GameNums[transform.parent.parent.GetSiblingIndex()].tileMaps.Clear();
+        SavePanel.instance.SaveTilemapData(transform.parent.parent.GetSiblingIndex());
+    }
+
+    public void OldGame()
     {
-        if (transform.name == "left") {
 
-            TilemapEditor.instance.index = (TilemapEditor.instance.index == 0) ? TilemapEditor.instance.availableTiles.Length - 1 : TilemapEditor.instance.index - 1;
+        Tilemap[] Maps = FindObjectsOfType<Tilemap>();
 
-        }
-        if (transform.name == "right") {
-
-            TilemapEditor.instance.index = (TilemapEditor.instance.index == TilemapEditor.instance.availableTiles.Length - 1) ? 0 : TilemapEditor.instance.index + 1;
-        }
-        if (transform.name == "start")
+        foreach (var h in Maps)
         {
-            TilemapEditor.instance.state = NewState.build;
-            TilemapEditor.instance.makeTile(TilemapEditor.instance.GetMaxSortingOrder()+1);
+
+            DestroyImmediate(h.gameObject); //Destroy为异步方法会在下一帧销毁，该方法在当前帧销毁
 
         }
-        if (transform.name == "end")
+
+
+        if (FindObjectsOfType<Tilemap>().Length == 0)
         {
-            TilemapEditor.instance.state = NewState.nothing;
+            UIMgr.Instance.HidePanel<SavePanel>();
 
-        }
-        if (transform.name == "resize") {
-            TilemapEditor.instance.state = NewState.select;
+            ABResMgr.Instance.LoadResAsync<GameObject>("gameplay", "MainCamera", (res) =>
+            {
+                Instantiate(res);
+            });
+
+            TilemapEditor.instance.setOldGame(transform.parent.parent.GetSiblingIndex());
         }
 
     }
+
 }

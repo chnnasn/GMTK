@@ -16,8 +16,8 @@ public class xlsxToJson : MonoBehaviour
 
     private static void StatJson() // 将方法改为静态
     {
-        string excelPath1 = Path.Combine(Application.streamingAssetsPath, "levels.xlsx");
-        string jsonPath1 = Path.Combine(Application.streamingAssetsPath, "levels.json");
+        string excelPath1 = Path.Combine(Application.dataPath, "Editor", "ArtRes", "ExcelAndJson", "levels.xlsx");
+        string jsonPath1 = Path.Combine(Application.dataPath, "Editor", "ArtRes", "ExcelAndJson", "levels.json");
 
         if (File.Exists(excelPath1))
         {

@@ -30,4 +30,4 @@ Assets:
 - Assets/Editor/ArtRes/Animation/happyLeft.anim
 - Assets/Editor/ArtRes/Animation/MovingRight.anim
 Dependencies:
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/image
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/image"

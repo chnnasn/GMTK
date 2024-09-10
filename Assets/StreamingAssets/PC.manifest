@@ -1,13 +1,14 @@
 ManifestFileVersion: 0
-CRC: 3743838526
+CRC: 1575764766
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: ui
       Dependencies:
-        Dependency_0: image
-        Dependency_1: music
+        Dependency_0: everything
+        Dependency_1: image
         Dependency_2: originalmaterial
+        Dependency_3: music
     Info_1:
       Name: everything
       Dependencies: {}
@@ -15,36 +16,40 @@ AssetBundleManifest:
       Name: scene
       Dependencies:
         Dependency_0: ui
-        Dependency_1: gameplay
+        Dependency_1: iso
         Dependency_2: image
-        Dependency_3: iso
-        Dependency_4: originalmaterial
+        Dependency_3: originalmaterial
+        Dependency_4: gameplay
     Info_3:
-      Name: gameplay
-      Dependencies:
-        Dependency_0: iso
-        Dependency_1: player
-        Dependency_2: originalmaterial
-    Info_4:
       Name: animation
       Dependencies:
         Dependency_0: image
-    Info_5:
-      Name: image
-      Dependencies: {}
-    Info_6:
+    Info_4:
       Name: iso
       Dependencies:
         Dependency_0: originalmaterial
-    Info_7:
-      Name: music
-      Dependencies: {}
-    Info_8:
+    Info_5:
       Name: player
       Dependencies:
         Dependency_0: animation
         Dependency_1: image
         Dependency_2: originalmaterial
-    Info_9:
+    Info_6:
+      Name: image
+      Dependencies: {}
+    Info_7:
       Name: originalmaterial
       Dependencies: {}
+    Info_8:
+      Name: music
+      Dependencies: {}
+    Info_9:
+      Name: resources
+      Dependencies:
+        Dependency_0: originalmaterial
+    Info_10:
+      Name: gameplay
+      Dependencies:
+        Dependency_0: iso
+        Dependency_1: player
+        Dependency_2: originalmaterial

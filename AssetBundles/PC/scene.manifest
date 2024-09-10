@@ -1,22 +1,20 @@
 ManifestFileVersion: 0
-CRC: 3237390602
+CRC: 2676099300
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f5aaa1edaca1a6167a0fdd98e6711cbb
+    Hash: e9de502214632b8e2eac7981552d78a6
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b55ea8491498864092a33a22bdc0a7af
+    Hash: 275aaa33f039e6695892ad0df3940a79
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: f5aaa1edaca1a6167a0fdd98e6711cbb
+    Hash: e9de502214632b8e2eac7981552d78a6
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
-  Script: {instanceID: 0}
-- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -49,8 +47,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 863908f83e816534cae47762a62c0727, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f2bb7d7e019b3544db34c583c059987d, type: 3}
@@ -67,15 +63,11 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: b726d89bd211f784cb9b6dd6a4ef0164, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 5ca9150e813fd3b46a6af64caa6f8f3f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 189d2f1384562dd4385ead2f60bb5429, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 30e6052f1c210a348b1296f8ba944d19, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
 - Class: 114
@@ -111,8 +103,8 @@ Assets:
 - Assets/Scenes/SampleScene.unity
 - Assets/Scenes/TileMap.unity
 Dependencies:
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/gameplay
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/image
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/iso
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/originalmaterial
-- E:/UnityProject/GMTKProj1/AssetBundles/PC/ui
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/gameplay"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/image"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/iso"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/ui"
