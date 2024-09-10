@@ -13,6 +13,7 @@ public class TileData
 [System.Serializable]
 public class TileMap
 {
+    public int layerOrder;
     public List<TileData> tileData = new List<TileData>();
 }
 
@@ -22,16 +23,11 @@ public class TileSort
     public List<TileMap> tileMaps = new List<TileMap>(); // 声明一个 TileInfo 类型的数组
 }
 
-[System.Serializable]
-public class GameNums
-{
-    public List<TileSort> tileSorts = new List<TileSort>();
-}
 
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/keepBuilding")]
 public class SaveBuildGame : ScriptableObject
 {
-    public List<GameNums> GameNums = new List<GameNums>();
+    public List<TileSort> GameNums = new List<TileSort>();
 
     // Start is called before the first frame update
     void Start()

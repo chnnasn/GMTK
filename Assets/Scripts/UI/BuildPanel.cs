@@ -71,7 +71,6 @@ public class BuildPanel : BasePanel
                 TilemapEditor.instance.state = NewState.nothing;
                 UIMgr.Instance.ShowPanel<SavePanel>();
                 SavePanel.instance.Save();
-
                 Destroy(cameraNow);
 
                 UIMgr.Instance.HidePanel<BuildPanel>();

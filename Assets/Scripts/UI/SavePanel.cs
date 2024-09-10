@@ -50,7 +50,7 @@ public class SavePanel : BasePanel
                 break;
         }
     }
-    public void SaveTilemapData()
+    public void SaveTilemapData(int index)
     {
 
         TilemapEditor TilemapEditor = FindFirstObjectByType<TilemapEditor>();
@@ -66,7 +66,7 @@ public class SavePanel : BasePanel
 
                 BoundsInt bounds = h.cellBounds;
 
-                TileMap tileInfo = new TileMap();
+                TileMap tileInfo = new TileMap(); //其中一个map
                 // 遍历所有瓦片并保存它们的信息
                 foreach (Vector3Int pos in bounds.allPositionsWithin)
                 {
@@ -81,20 +81,30 @@ public class SavePanel : BasePanel
                             tile = tile as Tile
                         };
 
-                        tileInfo.tileData.Add(tileData);
+                        tileInfo.tileData.Add(tileData); //map里的tile数据
                     }
 
+                    tileInfo.layerOrder = h.gameObject.GetComponent<TilemapRenderer>().sortingOrder;
 
                 }
 
                 tileSort.tileMaps.Add(tileInfo);
 
             }
-            GameNums gameNums = new GameNums();
 
-            gameNums.tileSorts.Add(tileSort);
+            if (index >= 0 ) {
 
-            SaveBuildGame.GameNums.Add(gameNums);
+                for(int i = 0; i< tileSort.tileMaps.Count;i++) {
+
+                    SaveBuildGame.GameNums[index].tileMaps.Add(tileSort.tileMaps[i]);
+                }
+                
+            }
+            else {
+
+                SaveBuildGame.GameNums.Add(tileSort);
+
+            }
         }
 
         Destroy(TilemapEditor.gameObject);
@@ -105,7 +115,6 @@ public class SavePanel : BasePanel
 
 
     public void ReMove(int index) {
-        SaveTilemapData();
         SaveBuildGame.GameNums.RemoveAt(index);
         Save();
     }

@@ -16,7 +16,7 @@ public class TilemapEditor : MonoBehaviour
     public NewState state = NewState.nothing;
 
     public static TilemapEditor instance;
-    Grid grid;
+
     Tilemap tilemap; // 当前 Tilemap 的引用
 
     [HideInInspector]
@@ -40,7 +40,6 @@ public class TilemapEditor : MonoBehaviour
 
     private void Start()
     {
-        grid = FindAnyObjectByType<Grid>();
         availableTiles = Resources.LoadAll<Tile>("Tiles");
         selectedTile = availableTiles[index];
     }
@@ -71,7 +70,7 @@ public class TilemapEditor : MonoBehaviour
                     if (startAndEnd == null)
                     {
 
-                        makeTile(2);
+                        makeTile(2,selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1));
                     }
                     else
                     {
@@ -96,49 +95,28 @@ public class TilemapEditor : MonoBehaviour
 
                     if (tile != null)
                     {
-                        if (tilemap.name == selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1)) {
+                        if (tilemap.name == selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1))
+                        {
 
                             tilemap.SetTile(gridPos, null);
                         }
-                        else {
+                        else
+                        {
 
-                            Tilemap map = getTileMap(mousePos);
+                            getNewMap(mousePos);
 
-                            if (map != null)
-                            {
-                                Tilemap[] maps = FindObjectsOfType<Tilemap>();
-
-                                bool found = false; // 标志变量，初始化为 false
-
-                                TilemapRenderer oldRenderer = map.gameObject.GetComponent<TilemapRenderer>();
-
-                                foreach (var h in maps)
-                                {
-                                    TilemapRenderer renderer = h.gameObject.GetComponent<TilemapRenderer>();
-                                    if (renderer.sortingOrder > oldRenderer.sortingOrder &&
-                                        renderer.name == selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1))
-                                    {
-                                        map = h; // 找到匹配的 Tilemap
-                                        found = true; // 设置标志变量为 true
-                                        break; // 退出循环
-                                    }
-                                }
-                                // 如果没有找到匹配的 Tilemap，创建一个新的
-                                if (!found)
-                                {
-                                    int newSortingOrder = map.gameObject.GetComponent<TilemapRenderer>().sortingOrder + 1;
-                                    makeTile(newSortingOrder);
-                                }
-                                else {
-                                    tilemap = map;
-                                }
-                            }
                         }
-                        
+
+                    }
+                    else
+                    {
+
+                        getNewMap(mousePos);
 
                     }
 
                 }
+
                 Vector3Int tilepo = tilemap.WorldToCell(mousePos); // 转换为瓦片坐标
                 // 设置选中的瓦片
                 tilemap.SetTile(tilepo, selectedTile);
@@ -148,15 +126,22 @@ public class TilemapEditor : MonoBehaviour
             if (state == NewState.select)
             {
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // 将鼠标屏幕坐标转换为世界坐标
-                Tilemap tilemap = getTileMap(mousePos);
-                if (tilemap != null) {
-                    Vector3Int gridPos = tilemap.WorldToCell(mousePos); // 转换为瓦片坐标
-                    Tile tile = tilemap.GetTile<Tile>(gridPos);
+                Tilemap map = getTileMap(mousePos);
+                if (map != null) {
+                    Vector3Int gridPos = map.WorldToCell(mousePos); // 转换为瓦片坐标
+                    Tile tile = map.GetTile<Tile>(gridPos);
                     if (tile != null)
                     {
-                        tilemap.SetTile(gridPos, null);
+                        map.SetTile(gridPos, null);
                     }
                 }
+
+                if (map != null && IsTilemapEmpty(map))
+                {
+
+                    Destroy(map.gameObject);
+                }
+
             }
         }
     }
@@ -170,9 +155,10 @@ public class TilemapEditor : MonoBehaviour
         }
     }
 
-    public void makeTile(int sortingOrder)
+    public void makeTile(int sortingOrder, string tileName)
     {
-        GameObject tileObject = new GameObject(selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1));
+        Grid grid = grid = FindAnyObjectByType<Grid>();
+        GameObject tileObject = new GameObject(tileName);
         Tilemap newTilemap = tileObject.AddComponent<Tilemap>();
         TilemapRenderer newRenderer = tileObject.AddComponent<TilemapRenderer>();
 
@@ -202,5 +188,104 @@ public class TilemapEditor : MonoBehaviour
         return null; // 没有找到对应的 Tilemap
     }
 
+    void getNewMap(Vector3 mousePos) {
+
+        Tilemap map = getTileMap(mousePos);
+
+        Tilemap[] maps = FindObjectsOfType<Tilemap>();
+
+        bool found = false; // 标志变量，初始化为 false
+
+        TilemapRenderer oldRenderer = map.gameObject.GetComponent<TilemapRenderer>();
+
+        foreach (var h in maps)
+        {
+            TilemapRenderer renderer = h.gameObject.GetComponent<TilemapRenderer>();
+
+            if (renderer.name == selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1) && renderer.sortingOrder > oldRenderer.sortingOrder)
+            {
+                map = h; // 找到匹配的 Tilemap
+                found = true; // 设置标志变量为 true
+                break; // 退出循环
+            }
+        }
+
+        if (!found)
+        {
+            int newSortingOrder = map.gameObject.GetComponent<TilemapRenderer>().sortingOrder + 1;
+            makeTile(newSortingOrder, selectedTile.name.Substring(selectedTile.name.IndexOf('_') + 1));
+        }
+        else
+        {
+            tilemap = map;
+        }
+    }
+
+    bool IsTilemapEmpty(Tilemap map)
+    {
+        // 获取 Tilemap 的边界范围
+        BoundsInt bounds = map.cellBounds;
+
+        // 遍历所有单元格位置
+        foreach (var position in bounds.allPositionsWithin)
+        {
+            // 如果在此位置有瓦片，则返回 false
+            if (map.HasTile(position))
+            {
+                return false;
+            }
+        }
+
+        // 如果遍历完所有位置后仍未找到瓦片，返回 true
+        return true;
+    }
+
+    public void setOldGame(int index) {
+
+
+        List<TileMap> maps = SavePanel.instance.SaveBuildGame.GameNums[index].tileMaps;
+
+        for (int i = 0; i < maps.Count; i++)
+        {
+            Tilemap map = null; 
+
+            for (int x = 0; x < maps[i].tileData.Count; x++)
+            {
+
+                Tilemap[] Maps = FindObjectsOfType<Tilemap>();
+
+                bool found = false; // 标志变量，初始化为 false
+
+                foreach (var h in Maps) {
+
+                    TilemapRenderer renderer = h.gameObject.GetComponent<TilemapRenderer>();
+
+                    if (renderer.name == maps[i].tileData[x].tile.name.Substring(maps[i].tileData[x].tile.name.IndexOf('_') + 1) 
+                        && renderer.sortingOrder == maps[i].layerOrder)
+                    { 
+                        map = h; // 找到匹配的 Tilemap
+                        found = true; // 设置标志变量为 true
+                        break; // 退出循环
+                    }
+                } 
+
+                if (!found) { 
+
+                    int newSortingOrder = maps[i].layerOrder;
+                    makeTile(newSortingOrder, maps[i].tileData[x].tile.name.Substring(maps[i].tileData[x].tile.name.IndexOf('_') + 1));
+
+                } 
+                else 
+                { 
+                    tilemap = map; 
+                }
+
+                tilemap.SetTile(maps[i].tileData[x].position, maps[i].tileData[x].tile);
+
+            }
+
+        }
+
+    }
 
 }
