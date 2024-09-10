@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 563479828
+CRC: 812820040
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0ff27d32865e658e0c93e596b0369de2
+    Hash: 29e332e5d515bc972ce94da5030cba14
   TypeTreeHash:
     serializedVersion: 2
     Hash: 68738882dee87240b4ba7e08831f22ce
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 0ff27d32865e658e0c93e596b0369de2
+    Hash: 29e332e5d515bc972ce94da5030cba14
 HashAppended: 0
 ClassTypes:
 - Class: 114
@@ -20,23 +20,13 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Resources/Tiles/superGarlic-1.asset
-- Assets/Resources/Tiles/special1.asset
-- Assets/Resources/Tiles/carpet-1.asset
-- Assets/Resources/Tiles/SuperRedWine-2.asset
-- Assets/Resources/Tiles/special2.asset
-- Assets/Resources/Tiles/SuperRedWine-1.asset
-- Assets/Resources/Tiles/desk.asset
-- Assets/Resources/Tiles/superGarlic-3.asset
-- Assets/Resources/Tiles/normal2.asset
-- Assets/Resources/Tiles/normal1.asset
-- Assets/Resources/Tiles/carpet+1.asset
-- Assets/Resources/Tiles/SuperRedWine-0.asset
-- Assets/Resources/Tiles/superGarlic-0.asset
-- Assets/Resources/Tiles/superGarlic-2.asset
-- Assets/Resources/Tiles/SuperRedWine-3.asset
-- Assets/Resources/Tiles/normal3.asset
-- Assets/Resources/Tiles/end.asset
-- Assets/Resources/Tiles/start.asset
+- Assets/Resources/Tiles/4_carpet-1.asset
+- Assets/Resources/Tiles/5_desk.asset
+- Assets/Resources/Tiles/2_normal1.asset
+- Assets/Resources/Tiles/3_carpet+1.asset
+- Assets/Resources/Tiles/6_SuperRedWine-0.asset
+- Assets/Resources/Tiles/7_superGarlic-0.asset
+- Assets/Resources/Tiles/0_tileStart.asset
+- Assets/Resources/Tiles/1_tileEnd.asset
 Dependencies:
 - "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"

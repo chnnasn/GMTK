@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3472330093
+CRC: 3457881412
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 73f64f07493d466f4436079b47d25e10
+    Hash: 4e8edb3a0914585ffa936e0b2f91639b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8ea09157fc72ae1239301b0843bc3210
+    Hash: b3629322f18c5520ead99da9b0239574
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 73f64f07493d466f4436079b47d25e10
+    Hash: 4e8edb3a0914585ffa936e0b2f91639b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -50,6 +50,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 92eafc03f5024b344ab6f84387881a26, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9ef58ad2138e3f5429645350e0b875b3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dfd0ec3b6e3c77540812242a57bf4976, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 34062f91d92f91f4db8513a1d8468351, type: 3}
 - Class: 114
@@ -92,6 +94,7 @@ Assets:
 - Assets/Editor/ArtRes/gameplay/0202.prefab
 - Assets/Editor/ArtRes/gameplay/0304.prefab
 - Assets/Editor/ArtRes/gameplay/0302.prefab
+- Assets/Editor/ArtRes/gameplay/TileMapManager.prefab
 - Assets/Editor/ArtRes/gameplay/0505.prefab
 - Assets/Editor/ArtRes/gameplay/0503.prefab
 - Assets/Editor/ArtRes/gameplay/0508.prefab

@@ -1,21 +1,26 @@
 ManifestFileVersion: 0
-CRC: 160215022
+CRC: 1925406390
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2d91fdc7382df3db54f2154a541babab
+    Hash: bde8439073e2723ef06ab9f89d619ef4
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8b8448c7b696490ac5d512ac9b401452
+    Hash: 363824408cb4e2cff3a034b077eef5b4
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 2d91fdc7382df3db54f2154a541babab
+    Hash: bde8439073e2723ef06ab9f89d619ef4
 HashAppended: 0
 ClassTypes:
 - Class: 91
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6cfb619f8fa2b6e4ca10b28bf689e890, type: 3}
+- Class: 115
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/PlayerCharacter.controller
 - Assets/GameObject.controller
+- Assets/Scripts/ScriptableObject/keepGames.asset
 Dependencies: []

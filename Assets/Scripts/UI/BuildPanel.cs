@@ -69,8 +69,20 @@ public class BuildPanel : BasePanel
                 break;
             case "ButtonSave":
                 TilemapEditor.instance.state = NewState.nothing;
+
                 UIMgr.Instance.ShowPanel<SavePanel>();
-                SavePanel.instance.Save();
+                if (SavePanel.instance == null) {
+
+
+                    Invoke("CallSaveMethod", 0.05f);
+
+                }
+                else
+                {
+
+                    SavePanel.instance.Save();
+                }
+               
                 Destroy(cameraNow);
 
                 UIMgr.Instance.HidePanel<BuildPanel>();
@@ -115,5 +127,11 @@ public class BuildPanel : BasePanel
         }
     }
 
-
+    private void CallSaveMethod()
+    {
+        if (SavePanel.instance != null)
+        {
+            SavePanel.instance.Save();
+        }
+    }
 }
