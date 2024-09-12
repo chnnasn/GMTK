@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 930724415
+CRC: 1224169317
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9879b8f2a86e3b2a6b172911b8fc6b81
+    Hash: 020cd163cdd0296b5e8499bc33390d6c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2d8df09e698f722ada1caa03d3413830
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 9879b8f2a86e3b2a6b172911b8fc6b81
+    Hash: 020cd163cdd0296b5e8499bc33390d6c
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -42,6 +42,7 @@ Assets:
 - "Assets/Editor/ArtRes/Image/\u8D70\u8DEF\uFF08\u987A\u5E8F1234321\uFF09/\u8D70\u8DEF4.png"
 - "Assets/Editor/ArtRes/Image/UI\u8BBE\u8BA1-\u8FD4\u56DE\u9009\u5173.png"
 - "Assets/Editor/ArtRes/Image/\u8868\u60C5\u5DEE\u5206\u955C\u50CF/\u59D4\u5C48\u955C\u50CF.png"
+- "Assets/Editor/ArtRes/Image/\u4E3B\u83DC\u5355.jpg"
 - "Assets/Editor/ArtRes/Image/\u7728\u773C\u5DEE\u52064\u955C\u50CF/1.png"
 - Assets/Editor/ArtRes/Image/%E4%B8%BB%E8%8F%9C%E5%8D%95%20(3).jpg
 - "Assets/Editor/ArtRes/Image/\u7728\u773C\u5DEE\u52063/1.png"
@@ -74,6 +75,7 @@ Assets:
 - "Assets/Editor/ArtRes/Image/\u8D70\u8DEF\u955C\u50CF\uFF08\u987A\u5E8F1234321\uFF09/2.png"
 - "Assets/Editor/ArtRes/Image/\u80CC\u666F\u677F.png"
 - "Assets/Editor/ArtRes/Image/\u7728\u773C\u5DEE\u52062\u955C\u50CF/2.png"
+- "Assets/Editor/ArtRes/Image/\u5236\u4F5C\u540D\u5355 1.jpg"
 - "Assets/Editor/ArtRes/Image/UI\u8BBE\u8BA1-\u8FD4\u56DE\u83DC\u5355.png"
 - "Assets/Editor/ArtRes/Image/UI\u8BBE\u8BA1-\u91CD\u65B0\u5F00\u59CB.png"
 - "Assets/Editor/ArtRes/Image/\u8868\u60C5\u5DEE\u5206/\u9AD8\u51742.png"
