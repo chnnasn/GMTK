@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3240263998
+CRC: 3951288538
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 124efea8f62ff71a9ebb7473879da209
+    Hash: 1d1e45f00d32b928122e669e782dfab5
   TypeTreeHash:
     serializedVersion: 2
     Hash: b90360021f95c293bf3f1bef88434a62
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 124efea8f62ff71a9ebb7473879da209
+    Hash: 1d1e45f00d32b928122e669e782dfab5
 HashAppended: 0
 ClassTypes:
 - Class: 21
@@ -43,6 +43,7 @@ Assets:
 - Assets/OriginalMaterial/special2.png
 - "Assets/OriginalMaterial/\u6307\u94881.png"
 - Assets/OriginalMaterial/superGarlic-2.png
+- "Assets/OriginalMaterial/\u573A\u666F\u95E8.png"
 - Assets/OriginalMaterial/superGarlic-0.png
 - Assets/OriginalMaterial/birdOnOther.png
 - Assets/OriginalMaterial/bloodBeer.png
@@ -51,6 +52,7 @@ Assets:
 - Assets/OriginalMaterial/desk.png
 - Assets/OriginalMaterial/stone2.png
 - Assets/OriginalMaterial/New Material.mat
+- "Assets/OriginalMaterial/\u65B0\u65B9\u5757.png"
 - Assets/OriginalMaterial/SuperRedWine-0.png
 - Assets/OriginalMaterial/garlic-1.png
 - Assets/OriginalMaterial/highM.png

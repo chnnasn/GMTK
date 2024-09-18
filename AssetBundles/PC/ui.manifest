@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3715464139
+CRC: 3374364405
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3af316807fc3ece4520b4bdf1f2865ed
+    Hash: d5cb78db6a08871f704c35f1f8c7dbd5
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2280a5bc70fb28cc6ab1a62d4f4879d1
+    Hash: 87d35549e27722994d2c7ac7bd92bd66
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 3af316807fc3ece4520b4bdf1f2865ed
+    Hash: d5cb78db6a08871f704c35f1f8c7dbd5
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -28,6 +28,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 83
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
 - Class: 114
@@ -145,23 +147,31 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.UI.SpriteState
 Assets:
 - Assets/Editor/ArtRes/ui/BeginPanel.prefab
+- Assets/Resources/Tiles/4_carpet-1.asset
 - Assets/Resources/Sound/soundObj.prefab
 - Assets/Editor/ArtRes/ui/BuildPanel.prefab
 - Assets/Editor/ArtRes/ui/SavePanel.prefab
 - Assets/Editor/ArtRes/ui/PeoplePanel.prefab
+- Assets/Resources/Tiles/5_desk.asset
 - Assets/Editor/ArtRes/ui/HelpPanel.prefab
 - Assets/Editor/ArtRes/ui/SettingPanel.prefab
 - Assets/Editor/ArtRes/ui/GameNum.prefab
+- Assets/Resources/Tiles/2_normal1.asset
+- Assets/Resources/Tiles/3_carpet+1.asset
 - Assets/Resources/UI/Canvas.prefab
 - Assets/Resources/UI/EventSystem.prefab
-- Assets/Resources/UI/UICamera.prefab
+- Assets/Resources/Tiles/6_SuperRedWine-0.asset
 - Assets/Editor/ArtRes/ui/ChoosePanel.prefab
 - Assets/Editor/ArtRes/ui/PanelGate.prefab
 - Assets/Editor/ArtRes/ui/PlayPanel.prefab
+- Assets/Resources/Tiles/7_superGarlic-0.asset
+- Assets/Resources/UI/UICamera.prefab
 - Assets/Editor/ArtRes/ui/LosePanel.prefab
 - Assets/Editor/ArtRes/ui/WinPanel.prefab
 - Assets/Editor/ArtRes/ui/PassPanel.prefab
 - Assets/Editor/ArtRes/ui/SaveThis.prefab
+- Assets/Resources/Tiles/0_tileStart.asset
+- Assets/Resources/Tiles/1_tileEnd.asset
 Dependencies:
 - "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/everything"
 - "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/image"
