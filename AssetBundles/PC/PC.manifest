@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3108575079
+CRC: 455349379
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -49,6 +49,3 @@ AssetBundleManifest:
         Dependency_0: iso
         Dependency_1: player
         Dependency_2: originalmaterial
-    Info_10:
-      Name: excelandjson
-      Dependencies: {}

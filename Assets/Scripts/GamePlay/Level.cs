@@ -11,7 +11,7 @@ using UnityEngine.Tilemaps;
 /// </summary>
 public class Level : MonoBehaviour
 {
-    Dictionary<string, Dictionary<Vector3Int, List<int>>> nameValueMap; 
+    Dictionary<string, Dictionary<Vector3Int, List<int>>> nameValueMap;
     Dictionary<string, List<int>> startAndEndMap;
     public static Level Instance { get; private set; }
     void Awake()
@@ -71,7 +71,7 @@ public class Level : MonoBehaviour
     {
         print("level is running");
         clean();
-        StartCoroutine(ReadJsonFile());
+        //StartCoroutine(ReadJsonFile());
         //»ñµÃµØ°å£º
         getCells(tilemapName1, tileStartP);
         getCells(tilemapName2, tileEndP);
@@ -266,7 +266,7 @@ public class Level : MonoBehaviour
 
     private IEnumerator ReadJsonFile()
     {
-        string uri = Path.Combine(Application.dataPath, "Editor", "ArtRes", "ExcelAndJson", "levels.json");
+        string uri = Path.Combine(Application.streamingAssetsPath, "levels.json");
 
         UnityWebRequest request = UnityWebRequest.Get(uri);
 
