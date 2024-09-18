@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 812820040
+CRC: 2043082968
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 29e332e5d515bc972ce94da5030cba14
+    Hash: 7182a9c84ddec27cffe84abce301a4c2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 68738882dee87240b4ba7e08831f22ce
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 29e332e5d515bc972ce94da5030cba14
+    Hash: 7182a9c84ddec27cffe84abce301a4c2
 HashAppended: 0
 ClassTypes:
 - Class: 114
@@ -29,4 +29,5 @@ Assets:
 - Assets/Resources/Tiles/0_tileStart.asset
 - Assets/Resources/Tiles/1_tileEnd.asset
 Dependencies:
+- "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/image"
 - "D:/\u684C\u9762/github/GMTK/AssetBundles/PC/originalmaterial"

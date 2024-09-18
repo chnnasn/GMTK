@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1575764766
+CRC: 4071024109
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -46,10 +46,14 @@ AssetBundleManifest:
     Info_9:
       Name: resources
       Dependencies:
-        Dependency_0: originalmaterial
+        Dependency_0: image
+        Dependency_1: originalmaterial
     Info_10:
       Name: gameplay
       Dependencies:
         Dependency_0: iso
         Dependency_1: player
         Dependency_2: originalmaterial
+    Info_11:
+      Name: excelandjson
+      Dependencies: {}
